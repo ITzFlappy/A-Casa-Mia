@@ -123,8 +123,21 @@ function openModal(roomId) {
     document.getElementById('modal-title').textContent = data.title;
     document.getElementById('modal-desc').textContent = data.desc;
     
-    // Popola Immagine principale per coerenza
-    changeModalImg(data.img);
+    // Funzione helper per l'errore: mostra placeholder chiari con testo
+    const fallback = (name, suff) => `https://placehold.co/800x600/EFEFEF/2C362B.jpg?text=${name.toUpperCase()}+${suff}`;
+
+    // Immagine principale & Thumbnails dinamicamente per ogni Room!
+    const mainImg = document.getElementById('modal-main-img');
+    const t1 = document.getElementById('modal-thumb-1');
+    const t2 = document.getElementById('modal-thumb-2');
+    const t3 = document.getElementById('modal-thumb-3');
+
+    mainImg.onerror = () => mainImg.src = fallback(roomId, 'MAIN');
+    mainImg.src = `assets/${roomId}-main.jpg`;
+
+    if(t1) { t1.onerror = () => t1.src = fallback(roomId, '1'); t1.src = `assets/${roomId}-1.jpg`; }
+    if(t2) { t2.onerror = () => t2.src = fallback(roomId, '2'); t2.src = `assets/${roomId}-2.jpg`; }
+    if(t3) { t3.onerror = () => t3.src = fallback(roomId, '3'); t3.src = `assets/${roomId}-3.jpg`; }
 
     // Popola Lista Servizi
     const amList = document.getElementById('modal-amenities');

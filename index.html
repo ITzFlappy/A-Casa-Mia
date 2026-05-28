@@ -177,7 +177,7 @@
                     <div class="carousel-track" id="roomTrack">
 
                         <div class="carousel-card" onclick="openModal('giulia')">
-                            <img src="assets/room.png" alt="Suite Giulia" loading="lazy">
+                            <img src="assets/giulia-main.jpg" alt="Suite Giulia" loading="lazy" onerror="this.src='https://placehold.co/800x600/FDFBF7/2C362B.jpg?text=Giulia+Main'">
                             <div class="card-content">
                                 <h3>Giulia</h3>
                                 <p>Eleganza minimale con vista panoramica.</p>
@@ -186,7 +186,7 @@
                         </div>
 
                         <div class="carousel-card" onclick="openModal('sofia')">
-                            <img src="assets/room.png" alt="Camera Sofia" loading="lazy">
+                            <img src="assets/sofia-main.jpg" alt="Camera Sofia" loading="lazy" onerror="this.src='https://placehold.co/800x600/FDFBF7/2C362B.jpg?text=Sofia+Main'">
                             <div class="card-content">
                                 <h3>Sofia</h3>
                                 <p>Accoglienza calda, pareti in pietra a vista.</p>
@@ -195,7 +195,7 @@
                         </div>
 
                         <div class="carousel-card" onclick="openModal('martina')">
-                            <img src="assets/room.png" alt="Camera Martina" loading="lazy">
+                            <img src="assets/martina-main.jpg" alt="Camera Martina" loading="lazy" onerror="this.src='https://placehold.co/800x600/FDFBF7/2C362B.jpg?text=Martina+Main'">
                             <div class="card-content">
                                 <h3>Martina</h3>
                                 <p>Romantica e spaziosa, pura pace dei sensi.</p>
@@ -204,7 +204,7 @@
                         </div>
 
                         <div class="carousel-card" onclick="openModal('chiara')">
-                            <img src="assets/room.png" alt="Suite Chiara" loading="lazy">
+                            <img src="assets/chiara-main.jpg" alt="Suite Chiara" loading="lazy" onerror="this.src='https://placehold.co/800x600/FDFBF7/2C362B.jpg?text=Chiara+Main'">
                             <div class="card-content">
                                 <h3>Chiara</h3>
                                 <p>Il lusso contemporaneo incontra la storia.</p>
@@ -213,7 +213,7 @@
                         </div>
 
                         <div class="carousel-card" onclick="openModal('beatrice')">
-                            <img src="assets/room.png" alt="Dependance Beatrice" loading="lazy">
+                            <img src="assets/beatrice-main.jpg" alt="Dependance Beatrice" loading="lazy" onerror="this.src='https://placehold.co/800x600/FDFBF7/2C362B.jpg?text=Beatrice+Main'">
                             <div class="card-content">
                                 <h3>Beatrice</h3>
                                 <p>Totale privacy, la Dependance per soggiorni speciali.</p>
@@ -270,11 +270,11 @@
             <span class="close-btn" onclick="closeModal()">&times;</span>
             <div class="modal-grid">
                 <div class="modal-gallery">
-                    <img id="modal-main-img" src="assets/room.png" alt="Immagine Stanza">
+                    <img id="modal-main-img" src="" alt="Immagine Stanza">
                     <div class="modal-thumbnails">
-                        <img src="assets/room.png" alt="thumb1" onclick="changeModalImg(this.src)">
-                        <img src="assets/hero.png" alt="thumb2" onclick="changeModalImg(this.src)">
-                        <img src="assets/breakfast.png" alt="thumb3" onclick="changeModalImg(this.src)">
+                        <img id="modal-thumb-1" src="" alt="thumb1" onclick="changeModalImg(this.src)">
+                        <img id="modal-thumb-2" src="" alt="thumb2" onclick="changeModalImg(this.src)">
+                        <img id="modal-thumb-3" src="" alt="thumb3" onclick="changeModalImg(this.src)">
                     </div>
                 </div>
                 <div class="modal-info">
